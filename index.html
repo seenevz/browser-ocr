@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Detector</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="mobile">
+        <section class="camera">
+          <div class="capture">
+            <video>Video capture not available 😢</video>
+            <img alt="The screen capture will appear in this box." />
+          </div>
+          <button type="button" class="capture__btn">Take picture</button>
+        </section>
+      </div>
+      <div class="desktop">
+        <label for="image-upload">
+          file to scan:
+          <input
+            id="image-upload"
+            type="file"
+            name="image-input"
+            accept="image/png, image/jpeg"
+          />
+        </label>
+        <button type="button" id="image-scan" disabled>Scan Image</button>
+        <div class="image-renderer__container">
+          <canvas id="image-renderer"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="vendor/opencv.js" async type="text/javascript"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
